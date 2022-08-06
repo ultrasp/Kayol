@@ -1,0 +1,23 @@
+@import 'vars';
+@import './components/materialIcons';
+@import 'bases';
+@import 'gridsystem';
+@import 'mixins';
+
+// components
+
+@import './components/buttons';
+@import './components/searchInput';
+@import './components/header';
+@import './components/footer';
+@import './components/carousel';
+
+// pages
+@import './pages/home';
+
+.container {
+  @include responsive(phone) {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}

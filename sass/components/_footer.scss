@@ -1,0 +1,105 @@
+.footer {
+  background-color: #1e1e1e;
+  // min-height: 20vh;
+  padding: 56px 0 27px;
+  background-image: url('../../assets/pages/footer/bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include responsive(phone) {
+    padding: 32px 0 20px;
+  }
+  &-column {
+    max-width: 334px;
+    @include responsive(phone) {
+      max-width: 100%;
+    }
+  }
+  h6 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--white);
+    border-bottom: 1.5px solid var(--grey-300);
+    padding-bottom: 12px;
+    @include responsive(phone) {
+      padding-top: 40px;
+    }
+  }
+
+  &-link {
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    // line-height: 19px;
+    color: var(--grey-200);
+    display: inline-block;
+    padding: 8px 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    &:hover {
+      color: var(--orange);
+    }
+  }
+  .socials {
+    width: 100%;
+    .social-link {
+      padding: 16px;
+      display: inline-block;
+      transition: all 0.3s ease;
+      svg {
+        path {
+          transition: all 0.3s ease;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: var(--orange);
+          }
+        }
+      }
+    }
+  }
+
+  &-bottom {
+    .line {
+      border-top: 1.3px solid rgba(140, 140, 140, 1);
+      margin-top: 32px;
+      margin-bottom: 24px;
+    }
+    p {
+      margin-bottom: 0;
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      color: #828282;
+      @include responsive(phone) {
+        padding-bottom: 20px;
+      }
+    }
+
+    .elements {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      flex-wrap: wrap;
+      .element {
+        padding: 0 12px;
+        width: 20%;
+        @include responsive(phone) {
+          width: 50%;
+          padding: 12px 0;
+        }
+      }
+    }
+  }
+}

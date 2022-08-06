@@ -1,0 +1,114 @@
+.lets-carousel {
+  padding-top: 40px;
+
+  &-item {
+    &.card {
+      background-color: var(--carousel-item);
+      border-radius: 8px;
+      min-height: 433px;
+      background-image: url('../../assets/pages/home/hero/naprav.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      width: calc(100% - 24px);
+      margin: 0 12px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      @include responsive(tablet) {
+        min-height: 260px;
+      }
+      .card-title {
+        padding: 24px 24px 0 24px;
+        p {
+          font-weight: 700;
+          font-size: 24px;
+          font-family: 'Raleway';
+          line-height: 28px;
+          color: var(--white);
+          margin-bottom: 0;
+        }
+        @include responsive(tablet) {
+          padding: 16px 16px 0 16px;
+
+          p {
+            font-size: 20px;
+            line-height: 23px;
+          }
+        }
+      }
+      .card-subtitle {
+        padding: 0 24px 0 24px;
+        p {
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          color: var(--grey-100);
+          span {
+            margin-right: 16px;
+            margin-left: 16px;
+          }
+        }
+        @include responsive(tablet) {
+          padding: 8px 16px 0 16px;
+
+          p {
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
+
+      .card-image {
+        width: 66%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        @include responsive(tablet) {
+          width: 50%;
+        }
+      }
+      .card-tag {
+        font-family: 'Raleway';
+        border: 1px solid var(--orange);
+        border-radius: 128px;
+        color: var(--orange);
+        display: inline-block;
+        padding: 7px 16px;
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+      }
+
+      .elipses {
+        position: absolute;
+        bottom: -150px;
+        right: -20px;
+        transform: scale(0);
+        transition: all 0.3s ease-in-out;
+        .one {
+          width: 216px;
+          height: 216px;
+          background: #3ebeed;
+          filter: blur(197px);
+        }
+        .two {
+          width: 216px;
+          height: 216px;
+          background: #7678ed;
+          filter: blur(203px);
+        }
+      }
+
+      &:hover .elipses {
+        transform: scale(0.6);
+
+        @include responsive(tablet) {
+          transform: scale(0);
+        }
+      }
+    }
+  }
+}
