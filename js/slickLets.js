@@ -54,13 +54,20 @@ $('.team-carousel').slick({
   dots: false,
   infinite: false,
   speed: 300,
-  slidesToShow: 6,
+  slidesToShow: 5,
   slidesToScroll: 1,
   // centerMode: true,
   prevArrow: $('.prev-team'),
   nextArrow: $('.next-team'),
   autoplay: true,
   responsive: [
+    {
+      breakpoint: 1900,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
     {
       breakpoint: 1400,
       settings: {
