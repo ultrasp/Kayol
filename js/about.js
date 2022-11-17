@@ -209,7 +209,6 @@ $('.live-carousel').slick({
 document.querySelectorAll('.live-card').forEach((x) => {
   x.querySelector('.play').addEventListener('click', () => {
     let VideoElement = x.querySelector('video');
-
     if (VideoElement.paused === true) {
       document.querySelectorAll('.live-card').forEach((el) => {
         let Vid = el.querySelector('video');
@@ -260,6 +259,24 @@ document.querySelectorAll('.live-card').forEach((x) => {
       x.querySelector('.sound').querySelector('.off').style.display = 'none';
       x.querySelector('.sound').querySelector('.on').style.display =
         'inline-block';
+    }
+  });
+});
+
+$(document).ready(function () {
+  $('.live-card > video').on('timeupdate', function (event) {
+    console.log(this.duration);
+    if (this.duration - this.currentTime < 0.3) {
+      document.querySelectorAll('.live-card').forEach((el) => {
+        let Vid = el.querySelector('video');
+        if (Vid.paused === false) {
+          Vid.pause();
+          el.querySelector('.play').querySelector('.off').style.display =
+            'none';
+          el.querySelector('.play').querySelector('.on').style.display =
+            'inline-block';
+        }
+      });
     }
   });
 });
