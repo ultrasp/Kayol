@@ -174,7 +174,7 @@ $('.live-carousel').slick({
     {
       breakpoint: 1920,
       settings: {
-        initialSlide: 1,
+        initialSlide: 2,
         slidesToShow: 4,
         slidesToScroll: 1,
       },
