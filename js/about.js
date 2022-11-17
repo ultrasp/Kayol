@@ -163,7 +163,7 @@ $('.live-carousel').slick({
   dots: false,
   infinite: false,
   speed: 300,
-  slidesToShow: 4,
+  slidesToShow: 5,
   initialSlide: 2,
   slidesToScroll: 1,
   centerMode: true,
@@ -171,6 +171,14 @@ $('.live-carousel').slick({
   nextArrow: $('.next-live'),
   // autoplay: true,
   responsive: [
+    {
+      breakpoint: 1920,
+      settings: {
+        initialSlide: 1,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
     {
       breakpoint: 1400,
       settings: {
