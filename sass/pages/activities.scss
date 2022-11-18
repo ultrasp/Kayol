@@ -193,7 +193,7 @@
 
       text-align: center;
       font-feature-settings: 'pnum' on, 'lnum' on;
-      @include responsive(phone) {
+      @include responsive(desktop) {
         font-size: 13px;
         line-height: 1.5;
       }
@@ -354,13 +354,32 @@
     pointer-events: none;
   }
 
-  @include responsive(phone) {
-    .calendar-controls {
-      margin-bottom: 12px;
-    }
+  @include responsive(desktop) {
     .number-item {
       width: 40px;
       height: 40px;
+    }
+
+    .calendar-today a {
+      outline: none !important;
+    }
+    .calendar .calendar-inner .calendar-body div {
+      padding: 0px;
+      margin: 8px 0;
+    }
+
+    .prev-dates,
+    .next-dates {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @include responsive(phone) {
+    .calendar-controls {
+      margin-bottom: 12px;
     }
 
     .calendar .calendar-inner .calendar-body div {

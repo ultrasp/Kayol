@@ -255,7 +255,7 @@
           font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .calendar-wrapper .calendar > * {
     font-size: 13px;
     line-height: 1.5;
@@ -457,13 +457,37 @@
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  .calendar-wrapper .calendar-controls {
-    margin-bottom: 12px;
-  }
+@media (max-width: 1400px) {
   .calendar-wrapper .number-item {
     width: 40px;
     height: 40px;
+  }
+  .calendar-wrapper .calendar-today a {
+    outline: none !important;
+  }
+  .calendar-wrapper .calendar .calendar-inner .calendar-body div {
+    padding: 0px;
+    margin: 8px 0;
+  }
+  .calendar-wrapper .prev-dates,
+  .calendar-wrapper .next-dates {
+    width: 40px;
+    height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-wrapper .calendar-controls {
+    margin-bottom: 12px;
   }
   .calendar-wrapper .calendar .calendar-inner .calendar-body div {
     padding: 0px;
