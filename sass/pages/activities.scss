@@ -1,0 +1,421 @@
+@import '../mixins';
+.activities {
+  .text-element {
+    h2 {
+      font-family: 'Inter';
+      font-style: italic;
+      font-weight: 865;
+      font-size: 56px !important;
+      line-height: 56px;
+      text-transform: uppercase;
+      color: #ffffff;
+      font-variation-settings: 'slnt' -4;
+
+      @include responsive(tablet) {
+        font-size: 36px !important;
+      }
+    }
+  }
+  .info {
+    min-height: auto;
+    padding-bottom: 120px;
+    @include responsive(tablet) {
+      padding-bottom: 40px;
+    }
+  }
+  .events-wrapper {
+    padding-bottom: 80px;
+    .events {
+      min-height: auto;
+      padding: 0;
+      max-width: 100%;
+    }
+    .lets-carousel-card-event {
+      transition: all 0.3s ease;
+      padding: 0;
+      @include responsive(tablet) {
+        padding: 0;
+      }
+
+      .event-card {
+        position: relative;
+        padding: 56px 88px;
+        width: 100%;
+        img {
+          margin-left: auto;
+          width: 296px;
+          height: 257px;
+          object-fit: contain;
+        }
+        @include responsive(tablet) {
+          width: 100%;
+          img {
+            margin-left: auto;
+            margin-right: auto;
+            width: 248px;
+            height: 156px;
+          }
+          padding: 16px;
+        }
+        @include responsive(phone) {
+          width: 100%;
+          img {
+            margin-left: auto;
+            margin-right: auto;
+            width: 248px;
+            height: 156px;
+          }
+          padding: 16px;
+        }
+
+        border-radius: 18px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: hsla(0, 0%, 11%, 1);
+        background-image: url('../../assets/pages/home/event/2.png');
+        &.two {
+          background-color: hsla(0, 0%, 11%, 1);
+          background-image: url('../../assets/pages/home/event/art1.png');
+        }
+        .subtitle {
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 23px;
+          color: var(--grey-100);
+          margin-bottom: 8px;
+          @include responsive(tablet) {
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+
+        .title {
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 900;
+          font-size: 32px;
+          line-height: 38px;
+          text-transform: uppercase;
+          color: var(--white);
+          @include responsive(tablet) {
+            font-size: 20px;
+            line-height: 23px;
+          }
+        }
+
+        .items {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          .item {
+            padding: 6px;
+            &:first-child {
+              padding-left: 0;
+            }
+            .address {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .alert-badge {
+              display: inline-block;
+              font-family: 'Raleway';
+              width: auto !important;
+              color: var(--grey-100);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              border-radius: 8px;
+              padding: 8px 12px;
+              margin: 0;
+              span {
+                margin-right: 8px;
+              }
+
+              @include responsive(tablet) {
+                padding: 8px 8px;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        .event-card-button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 11px 32px;
+          font-family: 'Raleway';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 22px;
+          color: var(--white);
+          background-color: transparent;
+          border: 1px solid var(--white);
+          outline: none;
+          border-radius: 26.7px;
+          margin-top: 24px;
+        }
+      }
+
+      &.slick-current {
+        transform: scale(0);
+      }
+    }
+  }
+}
+
+.calendar-wrapper {
+  background: #1e1e1e;
+  color: #fff;
+  border-radius: 16px;
+  padding-bottom: 16px;
+  .calendar {
+    position: relative;
+    min-width: 320px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-weight: normal;
+    & > * {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      /* identical to box height */
+
+      text-align: center;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      @include responsive(phone) {
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+  }
+  h3 {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 24px 16px 0;
+    @include responsive(phone) {
+      padding: 24px 16px 10px;
+    }
+  }
+
+  .dateNumber {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    &:focus {
+      outline: none;
+    }
+  }
+  .calendar-inner {
+    padding: 10px 10px;
+    @include responsive(phone) {
+      padding: 10px 6px;
+    }
+  }
+
+  .calendar .calendar-inner .calendar-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+  }
+
+  .calendar .calendar-inner .calendar-body div {
+    padding: 4px;
+    min-height: 30px;
+    line-height: 30px;
+    border: 1px solid transparent;
+    margin: 10px 2px 0px;
+    transition: all 0.2s ease;
+  }
+
+  .calendar .calendar-inner .calendar-body div:nth-child(-n + 7) {
+    border: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  .calendar .calendar-inner .calendar-body div:nth-child(-n + 7):hover {
+    border: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  .calendar .calendar-inner .calendar-body div > a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
+  .calendar .calendar-inner .calendar-body div {
+    border-radius: 50%;
+  }
+
+  .calendar .calendar-inner .calendar-body div:hover {
+    border: 1px solid var(--orange);
+  }
+
+  .calendar .calendar-inner .calendar-body div.empty-dates:hover {
+    border: 1px solid transparent;
+  }
+
+  .calendar .calendar-inner .calendar-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .calendar .calendar-inner .calendar-today-date {
+    display: none;
+  }
+
+  .calendar .calendar-inner .calendar-controls .calendar-year-month {
+    display: flex;
+    min-width: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .calendar .calendar-inner .calendar-controls .calendar-next {
+    text-align: right;
+  }
+
+  .calendar
+    .calendar-inner
+    .calendar-controls
+    .calendar-year-month
+    .calendar-year-label,
+  .calendar
+    .calendar-inner
+    .calendar-controls
+    .calendar-year-month
+    .calendar-month-label {
+    font-weight: 500;
+    font-size: 20px;
+
+    @include responsive(tablet) {
+      font-size: 16px;
+    }
+  }
+
+  .calendar .calendar-inner .calendar-body .calendar-today {
+    background: var(--orange);
+    border-radius: 50%;
+  }
+
+  .calendar .calendar-inner .calendar-body .calendar-today:hover {
+    border: 1px solid transparent;
+  }
+
+  .calendar .calendar-inner .calendar-body .calendar-today a {
+    outline: 2px solid var(--orange);
+  }
+
+  .calendar .calendar-inner .calendar-controls .calendar-next a,
+  .calendar .calendar-inner .calendar-controls .calendar-prev a {
+    color: #fff;
+    font-family: arial, consolas, sans-serif;
+    font-size: 26px;
+    text-decoration: none;
+    padding: 4px 12px;
+    display: inline-block;
+    background: transparent;
+    margin: 10px 0 10px 0;
+  }
+
+  .calendar .calendar-inner .calendar-controls .calendar-next a svg,
+  .calendar .calendar-inner .calendar-controls .calendar-prev a svg {
+    height: 20px;
+    width: 20px;
+  }
+
+  .calendar .calendar-inner .calendar-controls .calendar-next a svg path,
+  .calendar .calendar-inner .calendar-controls .calendar-prev a svg path {
+    fill: #9e9e9e;
+  }
+
+  .calendar .calendar-inner .calendar-body .prev-dates,
+  .calendar .calendar-inner .calendar-body .next-dates {
+    color: rgba(255, 255, 255, 0.332);
+  }
+
+  .calendar .calendar-inner .calendar-body .prev-dates:hover,
+  .calendar .calendar-inner .calendar-body .next-dates:hover {
+    border: 1px solid transparent;
+    pointer-events: none;
+  }
+
+  @include responsive(phone) {
+    .calendar-controls {
+      margin-bottom: 12px;
+    }
+    .number-item {
+      width: 40px;
+      height: 40px;
+    }
+
+    .calendar .calendar-inner .calendar-body div {
+      padding: 0px;
+      min-height: auto;
+      line-height: normal;
+      border: none;
+      margin: 8px 0;
+    }
+
+    .prev-dates,
+    .next-dates {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .items {
+    list-style: none;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 16px 16px;
+
+    li {
+      margin: 0;
+      padding: 0;
+      border-top: 1px solid #3d3d3d;
+      border-bottom: 1px solid #3d3d3d;
+
+      span {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #9e9e9e;
+        margin-bottom: 8px;
+        margin-top: 16px;
+        display: inline-block;
+      }
+
+      p {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #ffffff;
+      }
+    }
+  }
+}
