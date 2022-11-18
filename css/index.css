@@ -15277,6 +15277,51 @@ header .lets-navbar-right-list-item:hover, header .lets-navbar-right-list-item.a
   }
 }
 
+.breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.breadcrumb a {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+  /* Web sayt/white */
+  color: #ffffff;
+}
+
+.breadcrumb span {
+  display: inline-block;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+  /* Web sayt/Black scheme/$-gray-300 */
+  color: #6e6e6e;
+}
+
+.breadcrumb svg {
+  margin: 0 12px;
+}
+
 @media (max-width: 768px) {
   .container {
     padding-left: 24px !important;

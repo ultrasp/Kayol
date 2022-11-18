@@ -1,0 +1,149 @@
+@import '../mixins';
+
+.rewiev {
+  padding-top: 80px;
+
+  &-title {
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 865;
+    font-size: 56px;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-variation-settings: 'slnt' -4;
+    @include responsive(phone) {
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 41px;
+    border: 1.21605px solid var(--orange);
+    color: var(--orange);
+    outline: none;
+    border-radius: 26.7531px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    &:hover {
+      background-color: var(--orange);
+      color: #ffffff;
+    }
+    @include responsive(desktop) {
+      padding: 8px 24px;
+    }
+  }
+
+  .rewiev-cards-wrapper {
+    margin-bottom: 90px;
+    .rewiev-card {
+      padding: 32px 32px 16px;
+      background: #1e1e1e;
+      border-radius: 16px;
+
+      .top {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+        img {
+          border-radius: 50%;
+          width: 64px;
+          height: 64px;
+          margin-right: 20px;
+          @include responsive(tablet) {
+            width: 120px;
+            height: 120px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 16px;
+          }
+        }
+        .text {
+          @include responsive(tablet) {
+            margin-top: 16px;
+            width: 100%;
+            text-align: center;
+          }
+          h2 {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            /* identical to box height, or 120% */
+
+            font-feature-settings: 'tnum' on, 'lnum' on;
+
+            /* Web sayt/white */
+
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 8px;
+          }
+          p {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            /* identical to box height, or 138% */
+
+            font-feature-settings: 'tnum' on, 'lnum' on;
+
+            /* Web sayt/Black scheme/$-gray-300 */
+
+            color: #6e6e6e;
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      .desc {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #6e6e6e;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        margin-bottom: 12px;
+      }
+      .time {
+        text-align: right;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+
+        /* Web sayt/Black scheme/$-gray-300 */
+
+        color: #6e6e6e;
+        margin: 0;
+      }
+    }
+  }
+}

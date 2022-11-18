@@ -936,3 +936,43 @@
     }
   }
 }
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    /* Web sayt/white */
+
+    color: #ffffff;
+  }
+  span {
+    display: inline-block;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    /* Web sayt/Black scheme/$-gray-300 */
+
+    color: #6e6e6e;
+  }
+  svg {
+    margin: 0 12px;
+  }
+}
