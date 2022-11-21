@@ -147,3 +147,224 @@
     }
   }
 }
+
+.info-contact {
+  &-item {
+    .title {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #6e6e6e;
+    }
+
+    a {
+      text-decoration: none;
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 26px;
+      /* identical to box height */
+
+      font-feature-settings: 'pnum' on, 'lnum' on;
+
+      /* Web sayt/white */
+
+      color: #ffffff;
+    }
+  }
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 24px;
+  background-color: #1e1e1e;
+  overflow: hidden;
+  margin-top: 64px;
+  margin-bottom: 96px;
+  &-left,
+  &-right {
+    width: 50%;
+    @include responsive(tablet) {
+      width: 100%;
+    }
+  }
+
+  &-left {
+    padding: 40px;
+    h2 {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      /* or 125% */
+
+      font-feature-settings: 'pnum' on, 'lnum' on;
+
+      /* Web sayt/white */
+
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 24px;
+    }
+    h3 {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 21px;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      color: #ffffff;
+      svg {
+        margin-right: 8px;
+      }
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+
+      /* Web sayt/Black scheme/$-gray-300 */
+
+      color: #6e6e6e;
+    }
+  }
+  &-btn {
+    outline: none;
+    border: 1.21605px solid #ffffff;
+    border-radius: 26.7531px;
+    background-color: transparent;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 11px 32px;
+    margin-bottom: 64px;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  &-right {
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      height: 376px;
+    }
+  }
+}
+.contact-form {
+  margin-bottom: 96px;
+  h2 {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 865;
+    font-size: 56px;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #fff;
+    font-variation-settings: 'slnt' -4;
+    span {
+      color: #fbaa00;
+    }
+    max-width: 456px;
+
+    @include responsive(phone) {
+      font-size: 42px;
+    }
+  }
+  p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #6e6e6e;
+    padding-top: 24px;
+    max-width: 456px;
+  }
+
+  .input {
+    padding: 11px 16px;
+    background-color: #fff;
+    background: #141414;
+    border-radius: 8px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    width: 100%;
+    color: #3d3d3d;
+    outline: none;
+    border: none;
+    &::placeholder {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      /* identical to box height, or 162% */
+
+      /* Web sayt/Black scheme/$-gray-400 */
+
+      color: #3d3d3d;
+    }
+  }
+}
+
+.custom-file-upload {
+  border: none;
+  display: inline-block;
+  padding: 9px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #cfcfcf;
+  svg {
+    margin-right: 8px;
+  }
+}
+input[type='file'] {
+  display: none;
+}
+
+.button-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 20px;
+  background: #fbaa00;
+  border: 1px solid #fbaa00;
+  border-radius: 61px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 138% */
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+
+  /* Web sayt/white */
+
+  color: #ffffff;
+}
