@@ -15328,4 +15328,23 @@ header .lets-navbar-right-list-item:hover, header .lets-navbar-right-list-item.a
     padding-right: 24px !important;
   }
 }
+
+.lets-box {
+  padding: 40px;
+  width: 100%;
+  background: #1e1e1e;
+  border-radius: 24px;
+}
+
+@media (max-width: 768px) {
+  .lets-box {
+    padding: 24px;
+  }
+}
+
+.border-lets {
+  padding: 14px 29px 14px 16px;
+  border: 1px solid #3d3d3d;
+  border-radius: 16px;
+}
 /*# sourceMappingURL=index.css.map */
