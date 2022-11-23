@@ -162,3 +162,7 @@ document
       console.log('bosildi');
     });
   });
+
+function modalShow() {
+  document.querySelector('.admission-modal').classList.toggle('show');
+}
