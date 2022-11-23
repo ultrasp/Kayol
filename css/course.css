@@ -1082,6 +1082,8 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .course .write-in-course .left-item .button-wrapper .left-btn {
@@ -1115,6 +1117,13 @@
 
 .course .write-in-course .left-item .button-wrapper .left-btn.active {
   background: #289915;
+}
+
+@media (max-width: 768px) {
+  .course .write-in-course .left-item .button-wrapper .left-btn {
+    width: 100%;
+    margin: 2px 0;
+  }
 }
 
 .course .write-in-course .left-item .summa p {
@@ -1212,8 +1221,7 @@
 
 .course .write-in-course .right-item .desc-other {
   margin-bottom: 0;
-  width: 372px;
-  height: 28px;
+  max-width: 372px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 500;

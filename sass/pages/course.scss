@@ -940,6 +940,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         .left-btn {
           border: none;
           outline: none;
@@ -960,6 +961,10 @@
           cursor: pointer;
           &.active {
             background: #289915;
+          }
+          @include responsive(phone) {
+            width: 100%;
+            margin: 2px 0;
           }
         }
       }
@@ -1064,8 +1069,8 @@
       }
       .desc-other {
         margin-bottom: 0;
-        width: 372px;
-        height: 28px;
+        max-width: 372px;
+        // height: 28px;
 
         font-family: 'Raleway';
         font-style: normal;
