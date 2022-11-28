@@ -77,7 +77,7 @@ function nextStep(step) {
   let progresFath = document.querySelector('.progress-wrapper');
   let progressBar = progresFath.querySelector('.progressbar');
   let progressItems = progresFath.querySelectorAll('.item');
-
+  console.log(myStep);
   if (step === myStep) {
     document.querySelectorAll('.step-content').forEach((x) => {
       x.classList.add('step-hidden');
@@ -112,13 +112,16 @@ function nextStep(step) {
       document
         .querySelector(`.step${step + 1}`)
         .classList.remove('step-hidden');
+      document.querySelector('.checkk').style.display = 'none';
       myStep++;
     } else if (step === 4) {
       progressBar.style.width = '100%';
-      document
-        .querySelector(`.step${step + 1}`)
-        .classList.remove('step-hidden');
-      myStep++;
+      // document
+      //   .querySelector(`.step${step + 1}`)
+      //   .classList.remove('step-hidden');
+      document.querySelector('.admission-modal').classList.toggle('show');
+      myStep = 0;
+      location.reload();
     }
   } else {
     return alert("Qayta tekshirib ko'ring");
