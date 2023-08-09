@@ -135,7 +135,7 @@
 
 .course-hero .course-image {
   min-height: 320px;
-  background-image: url("../../assets/house.png");
+  background-image: url('../../assets/img/Interyer.png');
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: contain;

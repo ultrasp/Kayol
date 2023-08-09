@@ -32,8 +32,8 @@ $('.course-works-speaker-carousel').on('afterChange', function () {
     ) * 1;
   $('#course-works-speaker-carousel-active-num').html(dataId + 1);
 });
-document.querySelector('#course-works-speaker-carousel_num').innerHTML =
-  document.querySelectorAll('.course-works-speaker-carousel-card')?.length;
+// document.querySelector('#course-works-speaker-carousel_num').innerHTML =
+//   document.querySelectorAll('.course-works-speaker-carousel-card')?.length;
 
 $('.rewiev-carousel').on('afterChange', function () {
   var dataId =
