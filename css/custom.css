@@ -1,0 +1,72 @@
+.logo-phone{
+  color: #fff;
+  margin: 15px;
+}
+a.button{
+  -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+#toggle-lets-nav{
+  display: none;
+}
+
+@media (max-width: 768px){
+  .course-hero h1{
+    padding-bottom: 5px;
+  }
+  .course-hero-card-description{
+    padding-bottom: 0px;
+    margin: 10px;
+  }
+  .course-hero .course-image{
+    margin-top: 0px;
+  }
+  .course-hero-description{
+    padding-top: 20px;
+  }
+  .course-video{
+    padding-bottom: 20px;
+  }
+  .course .title-site{
+    line-height: 56px;
+  }
+  .course-works .desc{
+    padding-top: 5px;
+  }
+  .course-works .buttons-carousel{
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .course .course-learn .title-site{
+    padding-bottom: 10px;
+  }
+  .course .course-learn{
+    padding-bottom: 10px;
+  }
+  .course .rewiev{
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+  .home .buttons-carousel{
+    margin-top: 10px;
+  }
+  .course .course-speaker{
+    margin-bottom: 10px;
+  }
+  .course .write-in-course{
+    margin-bottom: 10px;
+  }
+  .course .write-in-course .right-item{
+    margin-bottom: 10px;
+  }
+  .mt-5{
+    margin-top: 5px!important;
+  }
+  .mt-20{
+    margin-top: 20px!important;
+  }
+}
