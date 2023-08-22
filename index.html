@@ -1869,6 +1869,10 @@
     <script>
       $("#lidform").submit(function (e) {
         e.preventDefault(); // avoid to execute the actual submit of the form.
+        Swal.fire(
+            // 'Good job!',
+            "Ma'lumotlaringiz Junatildi",
+        );
 
         var form = $(this);
         var actionUrl = form.attr("action");
@@ -1886,7 +1890,6 @@
             Swal.fire(
               // 'Good job!',
               "Ma'lumotlaringiz saqlandi",
-              "success"
             );
 
             // alert(data); // show response from the php script.
