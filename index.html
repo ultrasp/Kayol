@@ -122,6 +122,10 @@
     <link rel="stylesheet" href="css/min/rewiev.min.css" />
     <link rel="stylesheet" href="css/min/course.min.css" />
     <link rel="stylesheet" href="css/custom.css" />
+    <meta
+      name="facebook-domain-verification"
+      content="p3b3e0bn9hfl4f0jm2ffe469nda5ro"
+    />
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -147,7 +151,7 @@
         "script",
         "https://connect.facebook.net/en_US/fbevents.js"
       );
-      fbq("init", "792500685991712");
+      fbq("init", "827653488859125");
       fbq("track", "PageView");
     </script>
     <noscript
@@ -155,7 +159,7 @@
         height="1"
         width="1"
         style="display: none"
-        src="https://www.facebook.com/tr?id=792500685991712&ev=PageView&noscript=1"
+        src="https://www.facebook.com/tr?id=827653488859125&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
   </head>
@@ -829,7 +833,7 @@
 
               <div class="col-md-6 col-lg-4 col-xl-3">
                 <div class="course-speaker-item">
-                  <img src="./assets/Davron.png" alt="img">
+                  <img src="./assets/Davron.png" alt="img" />
 
                   <p class="course-speaker-item-title">Davronbek Uzaqov</p>
                   <p class="course-speaker-item-desc">
@@ -840,7 +844,7 @@
 
               <div class="col-md-6 col-lg-4 col-xl-3">
                 <div class="course-speaker-item">
-                  <img src="./assets/Aliyev.jpg" alt="img">
+                  <img src="./assets/Aliyev.jpg" alt="img" />
 
                   <p class="course-speaker-item-title">Jahongir Aliev</p>
                   <p class="course-speaker-item-desc">
@@ -1686,16 +1690,28 @@
 
                     <div class="row g-4">
                       <div class="col-12">
-                        <input type="text" name="name" class="input" placeholder="Ism" />
+                        <input
+                          type="text"
+                          name="name"
+                          class="input"
+                          placeholder="Ism"
+                        />
                       </div>
                       <!-- <div class="col-12">
                                         <input type="email" class="input" placeholder="Электронная почта">
                                     </div> -->
                       <div class="col-12">
-                        <input type="tel" name="phone" class="input" placeholder="Telefon" />
+                        <input
+                          type="tel"
+                          name="phone"
+                          class="input"
+                          placeholder="Telefon"
+                        />
                       </div>
                       <div class="col-12">
-                        <button  type="submit" class="lets-button">Roʻyxatdan oʻtish</button>
+                        <button type="submit" class="lets-button">
+                          Roʻyxatdan oʻtish
+                        </button>
                       </div>
                       <div class="col-12">
                         <p class="desc-other">
@@ -1870,8 +1886,8 @@
       $("#lidform").submit(function (e) {
         e.preventDefault(); // avoid to execute the actual submit of the form.
         Swal.fire(
-            // 'Good job!',
-            "Ma’lumotlaringiz yuborildi",
+          // 'Good job!',
+          "Ma’lumotlaringiz yuborildi"
         );
 
         var form = $(this);
@@ -1881,15 +1897,15 @@
           type: "POST",
           crossDomain: true,
           url: actionUrl,
-          "headers": {
-              "accept": "application/json",
-              "Access-Control-Allow-Origin":"*"
+          headers: {
+            accept: "application/json",
+            "Access-Control-Allow-Origin": "*",
           },
           data: form.serialize(), // serializes the form's elements.
           success: function (data) {
             Swal.fire(
               // 'Good job!',
-              "Ma'lumotlaringiz saqlandi",
+              "Ma'lumotlaringiz saqlandi"
             );
 
             // alert(data); // show response from the php script.
