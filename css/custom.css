@@ -69,4 +69,7 @@ a.button{
   .mt-20{
     margin-top: 20px!important;
   }
+  .course-works-carousel-card img{
+    height: auto;
+  }
 }
