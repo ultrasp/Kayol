@@ -72,4 +72,10 @@ a.button{
   .course-works-carousel-card img{
     height: auto;
   }
+  .course .course-learn .item-desc{
+    display: none;
+  }
+  .course .course-learn .item-icon{
+    margin-bottom: 3px;
+  }
 }
